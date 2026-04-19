@@ -19,3 +19,10 @@ This platform will serve as a centralized hub for coordination, communication, a
 3. Make your changes.
 4. Push your branch: `git push origin feature-name`.
 5. Create a pull request.
+
+# Languages used
+1. HTML
+2. CSS
+3. JavaScript
+ 
+ 
