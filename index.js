@@ -1,4 +1,5 @@
-  let btn = document.querySelector("#donate");
+  let btns = document.querySelectorAll(".btn.btn-primary");
+btns.forEach(btn => {
   btn.addEventListener("click", async () => {
     const amount = prompt("Amount to donate (USD):");
     if (!amount || isNaN(amount) || amount <= 0) {
@@ -20,4 +21,4 @@
     } catch (err) {
       alert("❌ Request failed. Check your connection.");
     }
-  });
+  })});
