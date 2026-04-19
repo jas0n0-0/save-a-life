@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer with Us - Save a Life Project</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="vol.css">
+</head>
+<body>
+
+    <main>
+        <section class="volunteer-form">
+            <div class="container">
+                <h2 class="h2">Volunteer with Us</h2>
+                <p>Join our team of dedicated volunteers and make a real difference in the lives of those affected by disasters. Fill out the form below to get started.</p>
+                <form action="#" method="post" class="vol-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Skills & Interests</label>
+                        <textarea id="skills" name="skills" rows="4" placeholder="Tell us about your skills, experience, and areas of interest (e.g., medical, logistics, fundraising)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Availability</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">Select your availability</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="weekends">Weekends only</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any additional information you'd like to share"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                    <button class="btn btn-primary" onclick="window.location.href = 'index.html'">Return to Homepage</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>
