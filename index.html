@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save a Life - Humanitarian Initiative</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navigation-bar">
+            <a href="index.html" class="logo">
+                <img src="ChatGPT Image Apr 15, 2026, 11_35_21 AM.png" alt="Save a Life Logo" height="80px" width="80px">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mission.html">Mission</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Make a Difference Today</h1>
+            <p>Our support can save lives in times of crisis. Bridge the gap between vulnerable communities affected by disasters and individuals or organizations willing to help.</p>
+            <button id ="donate" class="btn btn-primary">Donate Now</button>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>The Save a Life Project is a humanitarian initiative designed to bridge the gap between vulnerable communities affected by disasters and individuals or organizations willing to help. Through a dedicated website platform, the project aims to connect those in urgent need—due to drought, war, famine, and other crises—with volunteers, donors, and aid organizations.</p>
+            <p>This platform will serve as a centralized hub for coordination, communication, and resource distribution, ultimately improving the standards of living of affected populations.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>How We Help</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Connect Communities</h3>
+                    <p>We link vulnerable populations with immediate aid and long-term support systems to ensure lasting impact.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Coordinate Resources</h3>
+                    <p>Centralize donations, volunteers, and aid distribution for maximum efficiency and impact.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Facilitate Communication</h3>
+                    <p>Enable direct communication between helpers and those in need for real-time coordination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-involved">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join us in making a difference. Whether through donations, volunteering, or spreading awareness, your contribution matters.</p>
+            <div class="button-group">
+                <button id = "vol" class="btn btn-secondary">Volunteer</button>
+                <button id = "donate" class="btn btn-primary">Donate</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> info@savealife.org</p>
+            <p><strong>Phone:</strong>0712345678</p>
+            <p class="copyright">&copy; 2026 Save a Life Project. All rights reserved.</p>
+        </div>
+    </footer>
+    
+        <script>
+  let btn = document.querySelector("#donate");
+  btn.addEventListener("click", async () => {
+    const amount = prompt("Amount to donate (USD):");
+    if (!amount || isNaN(amount) || amount <= 0) {
+      alert("Please enter a valid amount.");
+      return;
+    }
+    try {
+      const res = await fetch("http://127.0.0.1:3000/donate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: Number(amount) }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      alert("❌ Request failed. Check your connection.");
+    }
+  });
+</script>
+    </script>
+</body>
+</html>
