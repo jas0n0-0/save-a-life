@@ -25,4 +25,6 @@ This platform will serve as a centralized hub for coordination, communication, a
 2. CSS
 3. JavaScript
  
- 
+# APIs used
+1. Stripe for donations
+2. EmailJS 
