@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
 
     } catch (err) {
-      console.error(err);
-      status.style.color = "red";
-      status.textContent = "❌ Something went wrong. Please try again.";
+  console.error("EmailJS Error:", JSON.stringify(err));
+  status.style.color = "red";
+  status.textContent = "❌ Something went wrong. Please try again.";
+    
 
     } finally {
       btn.disabled    = false;

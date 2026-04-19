@@ -68,7 +68,7 @@
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
-
+                        <p id="form-status" style="font-weight:600; margin-bottom:10px;"></p>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
@@ -163,7 +163,8 @@
             <p class="copyright">&copy; 2026 Save a Life Project. All rights reserved.</p>
         </div>
     </footer>
-    <script src="contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>emailjs.init("MjidqSbl0IMRHNb3f");</script>
+    <script src="contact.js"></script>
 </body>
 </html>
