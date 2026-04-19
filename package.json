@@ -1,13 +1,37 @@
 {
-  "devDependencies": {
-    "jest": "^30.3.0"
-  },
-  "dependencies": {
-    "axios": "^1.15.0",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^4.22.1",
-    "git-filter-repo": "^0.0.30",
-    "stripe": "^22.0.2"
-  }
+
+    "scripts": {
+
+        "test": "jest",
+         "start": "node server.js"
+
+    },
+
+    "devDependencies": {
+
+        "jest": "^30.3.0",
+
+        "jest-environment-jsdom": "^30.3.0"
+
+    },
+
+    "dependencies": {
+
+        "axios": "^1.15.0",
+
+        "cors": "^2.8.6",
+
+        "dotenv": "^17.4.2",
+
+        "emailjs-com": "^3.2.0",
+
+        "express": "^4.22.1",
+
+        "git-filter-repo": "^0.0.30",
+
+        "stripe": "^22.0.2"
+
+    }
+
 }
+
