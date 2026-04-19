@@ -8,7 +8,7 @@ btns.forEach(btn => {
       return;
     }
     try {
-      const res = await fetch("http://127.0.0.1:3000/donate", {
+      const res = await fetch("https://save-a-life-production.up.railway.app/donate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: Number(amount) }),
