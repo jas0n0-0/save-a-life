@@ -31,7 +31,7 @@ describe("Volunteer Form Submission", () => {
   send: jest.fn(),
 };
 
-    require("../vol.js");
+    require("../public/vol.js");
 
     form = document.querySelector(".vol-form");
     submitBtn = document.getElementById("submit");
