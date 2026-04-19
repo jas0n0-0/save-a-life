@@ -1,4 +1,8 @@
-import emailjs from "emailjs-com";
+/**
+ * @jest-environment jsdom
+ */
+
+const emailjs = require("emailjs-com");
 
 jest.mock("emailjs-com", () => ({
   send: jest.fn(),
@@ -23,8 +27,11 @@ describe("Volunteer Form Submission", () => {
       <div id="form-status"></div>
     `;
 
-    // Re-require your script here if it's in a module
-    require("./your-script-file");
+    global.emailjs = {
+  send: jest.fn(),
+};
+
+    require("../vol.js");
 
     form = document.querySelector(".vol-form");
     submitBtn = document.getElementById("submit");
