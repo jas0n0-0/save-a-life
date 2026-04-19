@@ -5,6 +5,12 @@ This platform will serve as a centralized hub for coordination, communication, a
 
 ## Table of Content
 # Installation
+1. Clone repository
 ```bash
  git clone git@github.com:jas0n0-0/save-a-life.git
 ```
+2. Install dependencies:
+```bash
+ npm install
+ ```
+ 
