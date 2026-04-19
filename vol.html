@@ -6,7 +6,7 @@
     <title>Volunteer with Us - Save a Life Project</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="vol.css">
-    <script defer src="vol.js"></script>
+
 </head>
 <body>
 
@@ -26,10 +26,10 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" required maxlength="10">
                     </div>
                     <div class="form-group">
-                        <label for="skills">Skills & Interests</label>
+                        <label for="skills">Skills to offer</label>
                         <textarea id="skills" name="skills" rows="4" placeholder="Tell us about your skills, experience, and areas of interest (e.g., medical, logistics, fundraising)"></textarea>
                     </div>
                     <div class="form-group">
@@ -46,13 +46,18 @@
                         <label for="message">Additional Message</label>
                         <textarea id="message" name="message" rows="4" placeholder="Any additional information you'd like to share"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                    <p id="form-status" style="font-weight:600; margin-bottom: 10px;"></p>
+                    <button  id="submit" type="submit" class="btn btn-primary">Submit Application</button>
                     <button class="btn btn-primary" onclick="window.location.href = 'index.html'">Return to Homepage</button>
                 </form>
             </div>
         </section>
     </main>
 
-
+    
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("MjidqSbl0IMRHNb3f");</script>
+  <script src="vol.js"></script>
+</body>
 </body>
 </html>
