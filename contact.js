@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     status.textContent = "";
 
     try {
-      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", payload);
+      await emailjs.send("service_fj03rrj", "template_wv97y3p", payload);
 
       status.style.color = "green";
       status.textContent = "✅ Message sent! We'll get back to you shortly.";
